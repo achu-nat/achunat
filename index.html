@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshaya Natarajan - Resume Website</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Spectral:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+  <nav>
+    <h1 class="logo">Akshaya</h1>
+    <ul>
+      <li><a href="#about">about me</a></li>
+      <li><a href="#education">education</a></li>
+      <li><a href="#experience">experiences</a></li>
+      <li><a href="#projects">projects</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="intro-box">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2 class="hero-heading">hello, i am akshaya natarajan!</h2>
+        <p>
+          A computer science & engineering student at UC Merced, passionate about AI, data science, 
+          database systems, and web development.
+        </p>
+        <!-- QR Code -->
+        <div class="qr-container">
+          <img src="qr-code.png" alt="LinkedIn QR Code">
+          <p>Connect with me on LinkedIn!</p>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="Pic of me.jpg" alt="Akshaya Natarajan">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      My name is Akshaya Natarajan, and I am a Computer Science and Engineering student who loves exploring 
+      how technology can shape the future. I’ve always been curious about how things work, and that curiosity 
+      has grown into a passion for solving problems and creating new ideas with code and design.
+    </p>
+    <p>
+      Being a woman in STEM means a lot to me. It hasn’t always been easy stepping into spaces where I don’t 
+      always see people who look like me, but that only pushes me to work harder. I want to show that anyone, 
+      no matter their background, can dream big and achieve in tech. I believe in standing out, not by being 
+      the loudest in the room, but by showing strength through persistence, creativity, and heart.
+    </p>
+    <p>
+      My journey is just beginning, but I know who I am: someone who wants to make a difference, break 
+      boundaries, and inspire others by being true to myself. Technology is my tool, but passion and 
+      determination are what guide me forward.
+    </p>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section alt-bg">
+    <h2>Education</h2>
+    <h3>University of California, Merced</h3>
+    <p><strong>Bachelor of Science, Computer Science and Engineering</strong> — Aug 2022 to May 2026</p>
+    <p><em>Relevant Coursework:</em> Intro to Programming, Advanced Programming, Full-Stack Web Development, 
+       Database Systems, Discrete Mathematics, Data Structures, Algorithm Design & Analysis, Numerical Methods, 
+       Calculus I–III, Linear Algebra & Differential Equations, Probability and Statistics, Computer Organization, 
+       Computer Vision, Spatial Analysis and Modeling, Professional Development: People in an Engineered World</p>
+    <br>
+    <h3>Folsom High School</h3>
+    <p><strong>High School Diploma</strong> — Aug 2018 to May 2022</p>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <h2>Experiences</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Kumon Tutor</h3>
+        <p><em>Sept 2018 – May 2022</em></p>
+        <p>Taught students from elementary to high school, improving math and reading proficiency. Developed individualized learning strategies to help students excel.</p>
+      </div>
+      <div class="card">
+        <h3>Undergraduate Research – Performance Analyst Researcher</h3>
+        <p><em>Oct 2024 – May 2025</em></p>
+        <p>Worked under Prof. Florin Rusu optimizing FAISS vector search, cleaning datasets, and tuning HNSW/IVF parameters to improve accuracy and efficiency.</p>
+      </div>
+      <div class="card">
+        <h3>Undergraduate Research – Researcher</h3>
+        <p><em>Aug 2025 – Present</em></p>
+        <p>Currently focused on GPU-powered FAISS to accelerate large-scale similarity searches. Cleaned data, fine-tuned configurations, and ran experiments to maximize performance.</p>
+      </div>
+    </div>
+  </section>
+
+ <!-- Projects Section -->
+<section id="projects" class="section alt-bg">
+  <h2>Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Moooon Quest</h3>
+      <p><em>September 2025 – Present</em></p>
+      <p>
+        This is a game that lets you guide a cow across Mars in a pixelated side-scroller, dodging falling aliens and asteroids while collecting stars for points.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+<footer>
+  <p>© 2025 Akshaya Natarajan</p>
+  <p>📞 916-385-8482 | 📧 akshaya.6n@gmail.com | 
+    <a href="https://www.linkedin.com/in/akshayanat" target="_blank">LinkedIn</a>
+  </p>
+</footer>
+
+  <script>
+  // Only apply dotted effect to section headings, not nav or hero
+  document.querySelectorAll(".section h2").forEach(h2 => {
+    const text = h2.textContent.trim().toLowerCase();
+    h2.innerHTML = text.split("").map((char, i) => {
+      if (char === " ") return "&nbsp;"; // keep spaces
+      return `<span class="letter">${char}</span>${i < text.length - 1 ? '<span class="dot">•</span>' : ''}`;
+    }).join("");
+  });
+</script>
+
+</body>
+</html>

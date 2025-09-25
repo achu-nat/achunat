@@ -1,0 +1,296 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("background.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+  font-family: 'Spectral', serif;
+}
+
+/* Sticky Navigation */
+header {
+  background: rgba(76, 175, 80, 0.9); /* semi-transparent green */
+  padding: 1rem 2rem;
+  position: fixed;   /* stay at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;     /* always above hero and other content */
+}
+
+/* Add spacing so hero isn't hidden behind nav */
+body {
+  background: url("background_1.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+  font-family: 'Spectral', serif;
+  padding-top: 80px; /* pushes content below sticky nav */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Figtree', sans-serif;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffe4ec;
+}
+
+/* Elegant Serif Logo */
+.logo {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: lowercase; /* keeps it like “clipse” style */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Figtree', sans-serif;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffe4ec;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: url("background_1.webp") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Hero heading uses Quicksand font but no dots */
+.hero-heading {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+  color: #4caf50; /* green heading */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Hero layout */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%; /* makes it circular */
+  border: 4px solid #4caf50; /* green outline */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fancy playful section headings */
+.section h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-transform: lowercase;
+  letter-spacing: 0.2rem;
+}
+
+/* Dots only for section headings */
+.section h2 .dot {
+  color: #e91e63;   /* pink dots */
+  margin: 0 0.2rem;
+  font-weight: bold;
+}
+
+.section h2 .letter {
+  display: inline-block;
+}
+
+
+/* White rounded intro box */
+.intro-box {
+  background: white;
+  border-radius: 25px;
+  padding: 2.5rem 3.5rem;
+  max-width: 800px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.intro-box h2 {
+  font-size: 2rem;
+  font-family: 'Figtree', sans-serif;
+  color: #4caf50; /* green heading */
+  margin-bottom: 1rem;
+}
+
+.intro-box p {
+  font-size: 1.2rem;
+  font-family: 'Spectral', serif;
+  color: #333;
+}
+
+/* Sticker styling */
+.sticker {
+  width: 180px;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  transform: rotate(-6deg);
+  opacity: 0.95;
+  transition: transform 0.3s ease;
+}
+
+.sticker:hover {
+  transform: rotate(-6deg) scale(1.1);
+}
+
+/* Section Styling */
+.section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.8); /* translucent card effect */
+  border-radius: 15px;
+}
+
+/* Fancy playful section headings */
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-transform: lowercase;
+  letter-spacing: 0.2rem;
+}
+
+h2 .dot {
+  color: #e91e63;   /* pink dots */
+  margin: 0 0.2rem;
+  font-weight: bold;
+}
+
+h2 .letter {
+  display: inline-block;
+}
+
+.section h3 {
+  font-family: 'Figtree', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid #e91e63;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Spectral', serif;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(233, 30, 99, 0.2);
+}
+
+/* Footer */
+footer {
+  background: rgba(76, 175, 80, 0.9);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-family: 'Figtree', sans-serif;
+}
+
+/* Logo now matches tab font */
+.logo {
+  font-family: 'Figtree', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* QR Code container */
+.qr-container {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.qr-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  border: 3px solid #4caf50; /* green border to match theme */
+  padding: 5px;
+  background: white; /* makes it pop on any bg */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.qr-container img:hover {
+  transform: scale(1.1);
+}
+
+.qr-container p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #4caf50;
+  font-family: 'Figtree', sans-serif;
+}
